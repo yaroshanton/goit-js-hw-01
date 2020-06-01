@@ -1,6 +1,6 @@
 let total = 0;
 
-while (true) {
+while (total < 25) {
     let input = prompt('Введите число:');
 
     if (input === null) {
