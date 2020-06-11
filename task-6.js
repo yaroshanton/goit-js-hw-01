@@ -1,12 +1,7 @@
 let total = 0;
+let input;
 
-while (total < 25) {
-    let input = prompt('Введите число:');
-
-    if (input === null) {
-        console.log('Отменено пользовтелем!');
-        break;
-    }
+while (input = prompt('Введите число:')) {
 
     input = Number(input);
 

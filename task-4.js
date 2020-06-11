@@ -1,21 +1,19 @@
 const credits = 23580;
 const pricePerDroid = 3000;
 
-let massage;
-let totalPrice;
-
+let message;
 
 let input = prompt('Сколько дроидов желаете купить?')
 
 
 if (input === null) {
-    massage = ('Отменено пользователем!');
+    message = ('Отменено пользователем!');
 } else if ((pricePerDroid * input) > credits) {
-    massage = ('Недостаточно средств на счету!');
+    message = ('Недостаточно средств на счету!');
 } else {
-    totalPrice = (credits - (pricePerDroid * input));
+    const totalPrice = (credits - (pricePerDroid * input));
 
-    massage = (`Вы купили ${input} дроидов, на счету осталось ${totalPrice} кредитов.`);
+    message = (`Вы купили ${input} дроидов, на счету осталось ${totalPrice} кредитов.`);
 }
 
-console.log(massage);
+console.log(message);

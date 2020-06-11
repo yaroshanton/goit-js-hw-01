@@ -2,7 +2,10 @@ let country;
 
 country = prompt('Введите страну:')
 
-switch (country.toLowerCase()) {
+if (country === null) {
+    console.log('Вы отменили действие. Попробуйте сначала!') 
+} else {
+    switch (country.toLowerCase()) {
     case 'китай':
         console.log('Доставка в Китай будет стоить 100 кредитов');
         break;
@@ -21,4 +24,4 @@ switch (country.toLowerCase()) {
         
     default: 
         alert('В вашей стране доставка не доступна')
-}
+}};
