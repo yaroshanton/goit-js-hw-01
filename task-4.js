@@ -7,13 +7,11 @@ let input = prompt('Сколько дроидов желаете купить?')
 
 
 if (input === null) {
-    message = ('Отменено пользователем!');
+    console.log('Отменено пользователем!');
 } else if ((pricePerDroid * input) > credits) {
-    message = ('Недостаточно средств на счету!');
+    console.log('Недостаточно средств на счету!');
 } else {
-    const totalPrice = (credits - (pricePerDroid * input));
+    const totalPrice = pricePerDroid * input;
 
-    message = (`Вы купили ${input} дроидов, на счету осталось ${totalPrice} кредитов.`);
+    console.log(`Вы купили ${input} дроидов, на счету осталось ${credits - totalPrice} кредитов.`);
 }
-
-console.log(message);
