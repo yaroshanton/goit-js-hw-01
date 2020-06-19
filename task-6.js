@@ -7,10 +7,11 @@ do {
     if (input !== null) {
         if (Number.isNaN(input)) {
             alert('Было введено не число, попробуйте еще раз!');
-        }   else {
-            input = Number(input);
-            total += input;
+            continue;
         };
+        
+        input = Number(input);
+        total += input;
     };
 
 } while (input !== null);
